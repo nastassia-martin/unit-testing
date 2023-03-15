@@ -9,6 +9,8 @@ import { Result } from './types/Result'
  */
 export const addTodo = (title: string, todos: Todo[]): Result => {
 	// check if title is empty
+
+	console.log(todos)
 	if (title === '') {
 		return {
 			success: false,
