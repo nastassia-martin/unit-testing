@@ -1,12 +1,13 @@
-import { describe, it, expect, afterEach } from 'vitest'
-import { addTodo } from '../functions'
+import { describe, it, expect, beforeEach } from 'vitest'
+import { addTodo, toggleTodo } from '../functions'
 import { Todo } from '../types/Todo'
 
 
 let todos: Todo[] = []
 
+
 describe('add a Todo', () => {
-    afterEach(() => {
+    beforeEach(() => {
         todos = []
     })
 
@@ -40,11 +41,40 @@ describe('add a Todo', () => {
 })
 
 
-//describe('toggle todo', () => {
-    //should toggle a todo x 2 tests
-    //should not toggle a todo that does not exist x 2 tests
+describe('toggle todo', () => {
+    beforeEach(() => {
+        todos = []
+    })
 
-//})
+    it('should toggle a todo', () => {
+
+        todos = [
+            { id: 1, title: "understand testing", completed: false },
+            { id: 2, title: "make friends with ts", completed: false },
+        ]
+
+        const id = todos[0].id
+        const result = toggleTodo(id, todos)
+
+        expect(result.success).toBe(true)
+        expect(todos[0].completed).toBe(true)
+
+    })
+
+    it('should not toggle a todo that does not exist', () => {
+
+        todos = [
+            { id: 1, title: "understand testing", completed: false },
+        ]
+
+        const id = 2 //todos[1].id
+        const result = toggleTodo(id, todos)
+
+        expect(result.success).toBe(false)
+        expect(result.error).toContain('Todo not found')
+    })
+
+})
 
 //describe('delete todo', () => {
     //should delete a todo x 2 tests
