@@ -6,8 +6,6 @@ This project is runs simple unit tests using Jest. The purpose of the project wa
 
 ### The tests
 
-Det ni behöver göra i denna inlämning är att skapa nedan 7 tester för de funktioner som finns i `functions.ts`. Ni får så klart skapa fler tester om ni vill, men nedan krävs för godkänt. Detta kommer att ge er ett G.
-
 - add todo
   - should add a todo
   - should not add a todo with empty title
