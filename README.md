@@ -1,29 +1,10 @@
-# FED22 Testning - Inlämningsuppgift 1
+# Unit Testning with Jest
 
-## Enhetstester med jest
+## About
 
-Syftet med detta repo är att det skall fungera som er kod som ni får given. Ni skall inte ändra på funktionaliteten som nu finns på något sätt.
+This project is runs simple unit tests using Jest. The purpose of the project was to become familiar with unit testing. The code was privded by the teacher, and the tests were built by me 😄
 
-## Gör er bekväm med koden
-
-Jag vill att ni tittar igenom koden, gör er bekväm med den så att ni förstår vad den gör. Testkör applikationen och se till att den beter sig som ni tänker er att den skall göra. Ni får i detta läge absolut lägga till en del `console.log` där ni känner för det.
-
-### Att köra applikationen
-
-När ni har klonat ner ert egna repo för uppgiften så kör ni:
-
-- `npm install`
-- `npm run dev`
-
-För att starta testerna så kör ni
-
-- `npm run test`
-
-och för att få en code coverage report så kör ni
-
-- `npm run coverage`
-
-## Er uppgift
+### The tests
 
 Det ni behöver göra i denna inlämning är att skapa nedan 7 tester för de funktioner som finns i `functions.ts`. Ni får så klart skapa fler tester om ni vill, men nedan krävs för godkänt. Detta kommer att ge er ett G.
 
@@ -37,3 +18,20 @@ Det ni behöver göra i denna inlämning är att skapa nedan 7 tester för de fu
 - delete todo
   - should delete a todo
   - should not delete a todo that does not exist
+
+## Set up
+
+In your terminal run these commands: 
+
+- `npm install`
+- `npm run dev`
+
+To run the tests run:
+
+- `npm run test`
+
+To see the coverage report run: 
+
+- `npm run coverage`
+
+
